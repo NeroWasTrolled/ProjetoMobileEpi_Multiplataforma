@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile_MDW.Views.PageEntrega">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Entry x:Name="txtCodigo" IsVisible="False" IsEnabled="False"/>
+            <!-- Picker para selecionar a matrícula -->
+            <Label Text="Selecione a Matrícula:" />
+            <Picker x:Name="pickerMatricula" Title="Selecione a Matrícula" />
+
+            <!-- Picker para selecionar o EPI -->
+            <Label Text="Selecione o EPI:" />
+            <Picker x:Name="pickerEpi" SelectedIndexChanged="pickerEpi_SelectedIndexChanged" Title="Selecione o EPI" />
+
+            <!-- Label para exibir a validade do EPI selecionado -->
+            <Label Text="Validade: " x:Name="labelValidade" />
+
+            <!-- DatePicker para selecionar a data de entrega -->
+            <Label Text="Selecione a Data de Entrega:" />
+            <DatePicker x:Name="datePickerEntrega" />
+
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+                <Button x:Name="btSalvar" Text="Inserir" HorizontalOptions="FillAndExpand" Clicked="btSalvar_Clicked"/>
+                <Button x:Name="btExcluir" Text="Excluir" HorizontalOptions="FillAndExpand" IsVisible="False" Clicked="btExcluir_Clicked"/>
+                <Button x:Name="btCancelar" Text="Cancelar" HorizontalOptions="FillAndExpand" Clicked="btCancelar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

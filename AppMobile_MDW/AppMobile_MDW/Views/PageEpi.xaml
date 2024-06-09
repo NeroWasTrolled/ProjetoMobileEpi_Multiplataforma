@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile_MDW.Views.PageEpi"
+             Title="Criação de Setor">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="Setores.png" HorizontalOptions="CenterAndExpand" Margin="20"/>
+            <Entry x:Name="txtCodigo" IsVisible="False" IsEnabled="False"/>
+            <Entry x:Name="txtEpi" Keyboard="Default" Placeholder="Nome da Epi"/>
+            <Label Text="Selecione a data de vencimento:" />
+            <DatePicker x:Name="datePickerVencimento" DateSelected="DatePickerVencimento_DateSelected" />
+            <Label x:Name="labelCountdown" />
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+                <Button x:Name="btSalvar" Text="Inserir" HorizontalOptions="FillAndExpand" Clicked="btSalvar_Clicked"/>
+                <Button x:Name="btExcluir" Text="Excluir" HorizontalOptions="FillAndExpand" IsVisible="False" Clicked="btExcluir_Clicked"/>
+                <Button x:Name="btCancelar" Text="Cancelar" HorizontalOptions="FillAndExpand" Clicked="btCancelar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

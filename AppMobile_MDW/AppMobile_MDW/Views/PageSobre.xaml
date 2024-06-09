@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile_MDW.Views.PageSobre" Title="Sobre">
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <Image Source="Pablo.jpg" Margin="10"/>
+            <StackLayout>
+                <Label Text="SUPERVISÃO" FontSize="Large" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
+                <Label Text="Cafetão: FRANÇA" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Maringá - 2024" FontSize="Medium" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

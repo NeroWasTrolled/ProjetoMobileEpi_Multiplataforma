@@ -1,0 +1,44 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile_MDW.Views.PageListar" Title="Listagem de Cadastros">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtNome" Keyboard="Default" Placeholder="Nome do Cadastro" HorizontalOptions="StartAndExpand"/>
+                <Button x:Name="btLocalizar" Text="Localizar" Clicked="btLocalizar_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <CheckBox x:Name="checkboxFuncionarios" CheckedChanged="checkboxFuncionarios_CheckedChanged" VerticalOptions="Center" />
+                <Label Text="Funcionários" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <CheckBox x:Name="checkboxEpis" CheckedChanged="checkboxEpis_CheckedChanged" VerticalOptions="Center"/>
+                <Label Text="Epis" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <CheckBox x:Name="checkboxEntregas" CheckedChanged="checkboxEntregas_CheckedChanged" VerticalOptions="Center"/>
+                <Label Text="Entregas" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <ListView x:Name="ListaFuncs" HasUnevenRows="True" SeparatorColor="DarkCyan" Margin="15" ItemSelected="ListaFuncs_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Id,StringFormat='Código: {0}'}"/>
+                                <Label Text="{Binding Matricula,StringFormat='Matricula: {0}'}"/>
+                                <Label Text="{Binding Nome,StringFormat='Nome: {0}'}"/>
+                                <Label Text="{Binding Epi, StringFormat='Epi: {0}'}"/>
+                                <Label Text="{Binding matricula, StringFormat='Matricula: {0}'}"/>
+                                <Label Text="{Binding epi, StringFormat='Epi: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
